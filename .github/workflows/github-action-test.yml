@@ -1,0 +1,8 @@
+name: learn-github-actions #actions 탭에서 보여질 workflow 이름
+on: [push] #for workflow triggering event
+jobs: #이 workflow에서 실행할 job 모음
+  check-bats-version: #job의 이름
+    runs-on: ubuntu-latest #job의 환결 설정
+    steps: #이 job에서 실행할 step 모음
+      - uses: actions/checkout@v3
+      - run: gradlew build
